@@ -12,8 +12,13 @@
 ## Work & Career
 
 - **Role:** Entrepreneur — building and selling AI products
+- **VPS-first delivery:** Install and personalize OpenClaw agents on a company VPS
+- **Primary target segments:** Agencies and retail companies (initially)
+- **Working name:** clawdbotsetup
 - **Current goal:** Start a company helping businesses set up OpenClaw agents
 - **Go-to-market focus:** Promotion + outreach (initially broad: "any business")
+- **Brand positioning:** Premium + corporate
+- **Launch market:** The Netherlands first, then expand internationally
 - **Coding experience:** Some, but learning — needs clear explanations and guidance
 - **Primary editor:** VS Code
 - **Primary chat channel:** Telegram (paired)

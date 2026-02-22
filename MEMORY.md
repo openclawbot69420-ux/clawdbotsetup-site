@@ -7,8 +7,11 @@
 
 ## The Mission
 
-- Build a company that helps businesses set up OpenClaw agents
+- Build a company that helps businesses set up OpenClaw agents (VPS install + setup + training)
 - Primary motivation: earn money and become financially free (building with Tieko)
+- Positioning: premium + corporate; Netherlands first, then expand
+- Target segments (initial): agencies + retail
+- Working name: clawdbotsetup
 - Mees is learning as he goes — explain everything clearly
 - This is the beginning — we're in setup/foundation phase
 
