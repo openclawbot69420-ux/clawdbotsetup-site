@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Contact';
+const description = 'Plan een intake of vraag een voorstel aan.';
+
+// TODO: set this to your real Formspree / Formspark endpoint.
+const formAction = "https://formspree.io/f/your-form-id";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="mx-auto max-w-6xl px-4 py-16">
+    <h1 class="text-4xl font-semibold tracking-tight">Contact</h1>
+    <p class="mt-4 max-w-2xl text-slate-700">
+      Vertel kort wat je wil automatiseren. Dan plannen we een intake en sturen we binnen 24–48 uur een voorstel.
+    </p>
+
+    <div class="mt-10 grid gap-10 lg:grid-cols-12">
+      <div class="lg:col-span-7">
+        <form method="POST" action={formAction} class="space-y-4 rounded-2xl border border-slate-200 p-8">
+          <div>
+            <label class="text-sm font-medium" for="name">Naam</label>
+            <input class="mt-2 w-full rounded-md border border-slate-300 px-3 py-2" id="name" name="name" required />
+          </div>
+
+          <div>
+            <label class="text-sm font-medium" for="email">E‑mail</label>
+            <input class="mt-2 w-full rounded-md border border-slate-300 px-3 py-2" id="email" name="email" type="email" required />
+          </div>
+
+          <div>
+            <label class="text-sm font-medium" for="company">Bedrijf (optioneel)</label>
+            <input class="mt-2 w-full rounded-md border border-slate-300 px-3 py-2" id="company" name="company" />
+          </div>
+
+          <div>
+            <label class="text-sm font-medium" for="message">Waar loop je nu tijd op te verliezen?</label>
+            <textarea class="mt-2 min-h-32 w-full rounded-md border border-slate-300 px-3 py-2" id="message" name="message" required></textarea>
+          </div>
+
+          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+
+          <button type="submit" class="w-full rounded-md bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-800">
+            Verstuur
+          </button>
+
+          <p class="text-xs text-slate-500">
+            Door te versturen ga je akkoord dat we je gegevens gebruiken om contact op te nemen.
+          </p>
+        </form>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-8">
+          <h2 class="text-lg font-semibold">Wat je krijgt</h2>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li>• Intake call (20–45 min)</li>
+            <li>• Voorstel met scope + planning</li>
+            <li>• €1.000 base package (incl. 1 agent) als startpunt</li>
+            <li>• Add-ons volledig modulair</li>
+          </ul>
+          <p class="mt-6 text-sm text-slate-700">
+            Liever direct mailen? Gebruik <a class="font-medium underline" href="mailto:hello@clawdbotsetup.nl">hello@clawdbotsetup.nl</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
