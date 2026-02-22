@@ -23,6 +23,13 @@ const canonical = url.origin === 'null' ? undefined : url.href;
     <meta property="og:title" content={`${title} · ${siteName}`} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="nl_NL" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} · ${siteName}`} />
+    <meta name="twitter:description" content={description} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
@@ -34,7 +41,7 @@ const canonical = url.origin === 'null' ? undefined : url.href;
         </a>
 
         <nav class="flex items-center gap-6 text-sm text-slate-700">
-          <a class="hover:text-slate-900" href="/pricing">Pricing</a>
+          <a class="hover:text-slate-900" href="/pricing">Prijzen</a>
           <a class="hover:text-slate-900" href="/contact">Contact</a>
           <a class="hover:text-slate-900" href="/privacy">Privacy</a>
           <a
