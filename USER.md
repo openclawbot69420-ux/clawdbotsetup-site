@@ -13,8 +13,10 @@
 
 - **Role:** Entrepreneur — building and selling AI products
 - **Current goal:** Start a company helping businesses set up OpenClaw agents
+- **Go-to-market focus:** Promotion + outreach (initially broad: "any business")
 - **Coding experience:** Some, but learning — needs clear explanations and guidance
 - **Primary editor:** VS Code
+- **Primary chat channel:** Telegram (paired)
 - **Work style:** Flexible schedule — works when and where he wants, not tied to morning/night
 
 ## Communication Preferences

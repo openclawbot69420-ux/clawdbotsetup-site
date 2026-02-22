@@ -8,6 +8,7 @@
 ## The Mission
 
 - Build a company that helps businesses set up OpenClaw agents
+- Primary motivation: earn money and become financially free (building with Tieko)
 - Mees is learning as he goes — explain everything clearly
 - This is the beginning — we're in setup/foundation phase
 
@@ -42,5 +43,5 @@
 - Enabled coding-agent skill with Codex CLI
 - Enabled QMD memory backend (BM25 + vectors + reranking)
 - Enabled compaction.memoryFlush + experimental sessionMemory
-- Telegram bot connected (@goonbottttttt_bot)
+- Telegram bot connected (@goonbottttttt_bot) — primary chat channel (paired Telegram)
 - Kimi channel connected
