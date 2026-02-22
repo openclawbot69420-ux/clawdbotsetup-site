@@ -11,6 +11,10 @@
 - Primary motivation: earn money and become financially free (building with Tieko)
 - Positioning: premium + corporate; Netherlands first, then expand
 - Target segments (initial): agencies + retail
+- Ideal early customer: AI-enthusiastic owner/operator who doesn't code and wants it done-for-you; likely to refer others
+- Offer shape (initial): €1k one-time setup fee + optional add-ons (services/skills) + paid support; business hours
+- Day-1 outcome: improve sales + market research with AI agents
+- Hosting: likely Hostinger (open to alternatives)
 - Working name: clawdbotsetup
 - Mees is learning as he goes — explain everything clearly
 - This is the beginning — we're in setup/foundation phase

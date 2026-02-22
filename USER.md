@@ -14,7 +14,13 @@
 - **Role:** Entrepreneur — building and selling AI products
 - **VPS-first delivery:** Install and personalize OpenClaw agents on a company VPS
 - **Primary target segments:** Agencies and retail companies (initially)
+- **Ideal early customer (profile):** AI-enthusiastic business owner who doesn't code and wants the setup done-for-you; likely to refer others if happy
 - **Working name:** clawdbotsetup
+- **Initial client size:** 1–10 employees
+- **Pricing (initial):** ~€1k one-time setup fee + optional add-ons (services/skills setup) + paid support options
+- **Support window:** Business hours
+- **Core promise (day 1):** Improve sales + market research with AI agents
+- **Hosting approach:** Likely Hostinger (open to alternatives)
 - **Current goal:** Start a company helping businesses set up OpenClaw agents
 - **Go-to-market focus:** Promotion + outreach (initially broad: "any business")
 - **Brand positioning:** Premium + corporate
