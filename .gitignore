@@ -1,0 +1,7 @@
+# OpenClaw local state / generated dirs
+.openclaw/
+.pi/
+
+# OS / editor
+.DS_Store
+.vscode/
