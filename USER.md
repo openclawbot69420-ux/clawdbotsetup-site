@@ -21,6 +21,10 @@
 - **Support window:** Business hours
 - **Core promise (day 1):** Improve sales + market research with AI agents
 - **Hosting approach:** Likely Hostinger (open to alternatives)
+- **Ops preference:** Client-friendly, done-for-you setup (assume clients don't know SSH)
+- **Security preference:** Use Tailscale for secure access (like our setup)
+- **Channel baseline:** Telegram likely required (secure), other integrations customizable
+- **Risk concern:** Setup failures leading to angry clients
 - **Current goal:** Start a company helping businesses set up OpenClaw agents
 - **Go-to-market focus:** Promotion + outreach (initially broad: "any business")
 - **Brand positioning:** Premium + corporate
