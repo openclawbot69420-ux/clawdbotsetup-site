@@ -25,6 +25,9 @@
 - **Security preference:** Use Tailscale for secure access (like our setup)
 - **Channel baseline:** Telegram likely required (secure), other integrations customizable
 - **Risk concern:** Setup failures leading to angry clients
+- **Warranty preference:** 48-hour post-delivery warranty window (free fixes)
+- **Handover preference:** Client present for handover (at least 30 min)
+- **Backups preference:** Automatic daily backups
 - **Current goal:** Start a company helping businesses set up OpenClaw agents
 - **Go-to-market focus:** Promotion + outreach (initially broad: "any business")
 - **Brand positioning:** Premium + corporate

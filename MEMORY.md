@@ -19,6 +19,9 @@
 - Security baseline: Tailscale secure setup (like our internal setup)
 - Channel baseline: Telegram likely required; rest customizable
 - Primary risk worry: setup goes wrong → client gets angry
+- Warranty preference: 48-hour warranty window after delivery
+- Handover preference: client present for handover
+- Backups preference: enable automatic daily backups
 - Working name: clawdbotsetup
 - Mees is learning as he goes — explain everything clearly
 - This is the beginning — we're in setup/foundation phase
