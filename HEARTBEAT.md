@@ -9,6 +9,10 @@
    - Scan the last ~1-2 hours of actions (commands run, config edits, model switches).
    - Look for: wrong model used, broken configs, missing commits, unsafe edits, unclear communication.
 
+   Then do a small forward-progress pass (if there is time):
+   - Website: review open issues/TODOs in clawdbotsetup-site and ship one small improvement (copy/SEO/contact form, etc.).
+   - Business: refine offer/SOP/docs (scope boundaries, checklist, sales copy) and commit small improvements.
+
 2) Parallelize fixes with sub-agents (when there is real work to do)
    - Spawn 2–4 sub-agents in parallel for independent tasks, e.g.:
      - (A) Audit configs / recent diffs
