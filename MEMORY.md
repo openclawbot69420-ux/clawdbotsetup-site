@@ -12,7 +12,9 @@
 - Positioning: premium + corporate; Netherlands first, then expand
 - Target segments (initial): agencies + retail
 - Ideal early customer: AI-enthusiastic owner/operator who doesn't code and wants it done-for-you; likely to refer others
-- Offer shape (initial): €1k one-time setup fee + optional add-ons (services/skills) + paid support; business hours
+- Offer shape (initial): €1k one-time setup fee (includes 1 agent) + optional add-ons (services/skills) + paid support; business hours
+- Support baseline: 2 weeks included if something breaks
+- Starter agent menu (v1): email triage/drafting; lead qualification (Telegram → Sheets/CRM); meeting scheduling (Google Calendar); market/competitor research; internal KB Q&A (small scope)
 - Day-1 outcome: improve sales + market research with AI agents
 - Hosting: likely Hostinger (open to alternatives)
 - Delivery style: maximize client-friendliness; assume non-technical clients (no SSH)

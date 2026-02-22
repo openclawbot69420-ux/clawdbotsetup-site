@@ -17,9 +17,11 @@
 - **Ideal early customer (profile):** AI-enthusiastic business owner who doesn't code and wants the setup done-for-you; likely to refer others if happy
 - **Working name:** clawdbotsetup
 - **Initial client size:** 1–10 employees
-- **Pricing (initial):** ~€1k one-time setup fee + optional add-ons (services/skills setup) + paid support options
+- **Pricing (initial):** ~€1k one-time setup fee (includes 1 agent) + optional add-ons (services/skills setup) + paid support options
 - **Support window:** Business hours
+- **Support baseline:** 2 weeks included if something breaks
 - **Core promise (day 1):** Improve sales + market research with AI agents
+- **Starter agent menu (v1):** Email triage/drafting; Lead qualification (Telegram → Sheets/CRM); Meeting scheduling (Google Calendar); Market/competitor research; Internal KB Q&A
 - **Hosting approach:** Likely Hostinger (open to alternatives)
 - **Ops preference:** Client-friendly, done-for-you setup (assume clients don't know SSH)
 - **Security preference:** Use Tailscale for secure access (like our setup)
