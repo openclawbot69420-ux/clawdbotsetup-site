@@ -9,61 +9,120 @@ const formAction = "https://formspree.io/f/your-form-id";
 ---
 
 <BaseLayout title={title} description={description}>
-  <section class="mx-auto max-w-6xl px-4 py-16">
-    <h1 class="text-4xl font-semibold tracking-tight">Contact</h1>
-    <p class="mt-4 max-w-2xl text-slate-700">
-      Vertel kort wat je wil automatiseren. Dan plannen we een intake en sturen we binnen 24–48 uur een voorstel.
-    </p>
 
-    <div class="mt-10 grid gap-10 lg:grid-cols-12">
-      <div class="lg:col-span-7">
-        <form method="POST" action={formAction} class="space-y-4 rounded-2xl border border-slate-200 p-8">
-          <div>
-            <label class="text-sm font-medium" for="name">Naam</label>
-            <input class="mt-2 w-full rounded-md border border-slate-300 px-3 py-2" id="name" name="name" required />
+  <!-- ── Page header ───────────────────────────────────────────────── -->
+  <section style="background:var(--gradient-hero);border-bottom:1px solid var(--color-border-soft);position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;pointer-events:none;" aria-hidden="true">
+      <div style="position:absolute;top:-60px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(59,130,246,0.09) 0%,transparent 70%);border-radius:50%;"></div>
+      <div style="position:absolute;inset:0;background-image:linear-gradient(var(--color-border) 1px,transparent 1px),linear-gradient(90deg,var(--color-border) 1px,transparent 1px);background-size:64px 64px;opacity:0.3;"></div>
+    </div>
+    <div class="mx-auto max-w-6xl px-4 py-16 sm:py-20" style="position:relative;">
+      <p class="animate-on-scroll section-badge mb-5">Neem contact op</p>
+      <h1 class="animate-on-scroll delay-1 text-4xl font-semibold tracking-tight sm:text-5xl" style="color:var(--color-navy);line-height:1.1">Contact</h1>
+      <p class="animate-on-scroll delay-2 mt-4 max-w-xl text-lg" style="color:var(--color-text-muted)">
+        Vertel kort wat je wil automatiseren. Dan plannen we een intake en sturen we binnen 24–48 uur een voorstel.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Contact form + info ────────────────────────────────────────── -->
+  <section style="background:#fff">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <div class="grid gap-10 lg:grid-cols-12">
+
+        <!-- Form -->
+        <div class="lg:col-span-7 animate-on-scroll">
+          <form method="POST" action={formAction} class="rounded-2xl border p-8 space-y-6" style="border-color:var(--color-border)">
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label class="form-label" for="name">Naam</label>
+                <input class="form-input" id="name" name="name" required placeholder="Jan de Vries" />
+              </div>
+              <div>
+                <label class="form-label" for="email">E‑mail</label>
+                <input class="form-input" id="email" name="email" type="email" required placeholder="jan@bedrijf.nl" />
+              </div>
+            </div>
+
+            <div>
+              <label class="form-label" for="company">Bedrijf <span style="color:var(--color-text-xmuted);font-weight:400;">(optioneel)</span></label>
+              <input class="form-input" id="company" name="company" placeholder="Uw bedrijf B.V." />
+            </div>
+
+            <div>
+              <label class="form-label" for="message">Waar loop je nu tijd op te verliezen?</label>
+              <textarea
+                class="form-input"
+                id="message"
+                name="message"
+                required
+                rows="5"
+                placeholder="Bijv. we besteden 3 uur per dag aan het handmatig triage-en van klantmails…"
+              ></textarea>
+            </div>
+
+            <!-- Honeypot -->
+            <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+
+            <div class="pt-2">
+              <button type="submit" class="btn-primary w-full justify-center py-3.5 text-base">
+                Verstuur aanvraag
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+
+            <p class="text-xs text-center" style="color:var(--color-text-xmuted)">
+              Door te versturen ga je akkoord dat we je gegevens gebruiken om contact op te nemen. Zie onze <a href="/privacy" class="underline hover:text-blue-600">privacyverklaring</a>.
+            </p>
+          </form>
+        </div>
+
+        <!-- Info sidebar -->
+        <div class="lg:col-span-5 space-y-5">
+
+          <!-- What you get -->
+          <div class="animate-on-scroll delay-1 rounded-2xl border p-7" style="border-color:var(--color-border);background:var(--color-surface)">
+            <h2 class="text-lg font-semibold" style="color:var(--color-navy)">Wat je krijgt</h2>
+            <ul class="mt-4 space-y-3 text-sm" style="color:var(--color-text-muted)">
+              {[
+                'Intake call (20–45 min)',
+                'Voorstel met scope + planning',
+                '€1.000 base package (incl. 1 agent) als startpunt',
+                'Add-ons volledig modulair',
+                'Reactie binnen 24–48 uur',
+              ].map(item => (
+                <li class="flex items-center gap-2.5">
+                  <span class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-white text-[10px]" style="background:var(--gradient-accent)">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <div>
-            <label class="text-sm font-medium" for="email">E‑mail</label>
-            <input class="mt-2 w-full rounded-md border border-slate-300 px-3 py-2" id="email" name="email" type="email" required />
+          <!-- Direct mail -->
+          <div class="animate-on-scroll delay-2 rounded-2xl border p-7" style="border-color:var(--color-border);background:var(--color-surface)">
+            <h2 class="text-base font-semibold" style="color:var(--color-navy)">Liever direct mailen?</h2>
+            <p class="mt-2 text-sm" style="color:var(--color-text-muted)">We sturen je binnen 24 uur een reactie.</p>
+            <a
+              href="mailto:hello@clawdbotsetup.nl"
+              class="mt-4 inline-flex items-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-medium transition-all hover:shadow-md"
+              style="border-color:var(--color-border);color:var(--color-navy)"
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+              hello@clawdbotsetup.nl
+            </a>
           </div>
 
-          <div>
-            <label class="text-sm font-medium" for="company">Bedrijf (optioneel)</label>
-            <input class="mt-2 w-full rounded-md border border-slate-300 px-3 py-2" id="company" name="company" />
+          <!-- Promise -->
+          <div class="animate-on-scroll delay-3 rounded-2xl p-7 text-white" style="background:var(--gradient-cta)">
+            <p class="text-xs font-semibold uppercase tracking-wider mb-3" style="color:rgba(255,255,255,0.5)">Onze belofte</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.85)">
+              Geen scope creep. Geen verrassingen. We leggen vooraf vast wat we bouwen, testen, en opleveren. Zakelijk, discreet, productie-gereed.
+            </p>
           </div>
-
-          <div>
-            <label class="text-sm font-medium" for="message">Waar loop je nu tijd op te verliezen?</label>
-            <textarea class="mt-2 min-h-32 w-full rounded-md border border-slate-300 px-3 py-2" id="message" name="message" required></textarea>
-          </div>
-
-          <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
-
-          <button type="submit" class="w-full rounded-md bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-800">
-            Verstuur
-          </button>
-
-          <p class="text-xs text-slate-500">
-            Door te versturen ga je akkoord dat we je gegevens gebruiken om contact op te nemen.
-          </p>
-        </form>
-      </div>
-
-      <div class="lg:col-span-5">
-        <div class="rounded-2xl border border-slate-200 bg-slate-50 p-8">
-          <h2 class="text-lg font-semibold">Wat je krijgt</h2>
-          <ul class="mt-4 space-y-2 text-sm text-slate-700">
-            <li>• Intake call (20–45 min)</li>
-            <li>• Voorstel met scope + planning</li>
-            <li>• €1.000 base package (incl. 1 agent) als startpunt</li>
-            <li>• Add-ons volledig modulair</li>
-          </ul>
-          <p class="mt-6 text-sm text-slate-700">
-            Liever direct mailen? Gebruik <a class="font-medium underline" href="mailto:hello@clawdbotsetup.nl">hello@clawdbotsetup.nl</a>.
-          </p>
         </div>
       </div>
     </div>
   </section>
+
 </BaseLayout>

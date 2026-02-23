@@ -6,71 +6,185 @@ const description = 'Security by default: Tailscale, least privilege, logging, b
 ---
 
 <BaseLayout title={title} description={description}>
-  <section class="mx-auto max-w-6xl px-4 py-16">
-    <h1 class="text-4xl font-semibold tracking-tight">Beveiliging</h1>
-    <p class="mt-4 max-w-2xl text-slate-700">
-      Premium/corporate delivery betekent: duidelijke grenzen, minimale exposure en inzicht in wat er gebeurt.
-      We bouwen agents die je echt kunt draaien in productie — niet alleen een demo.
-    </p>
 
-    <div class="mt-10 grid gap-6 lg:grid-cols-2">
-      <div class="rounded-2xl border border-slate-200 p-8">
-        <h2 class="text-xl font-semibold">Tailscale (secure remote access)</h2>
-        <p class="mt-3 text-sm text-slate-700">
-          Voor beheer en troubleshooting gebruiken we bij voorkeur <span class="font-semibold text-slate-900">Tailscale</span>.
-          Dat is identity-based, end‑to‑end encrypted, en voorkomt dat je VPS “open” moet staan.
-        </p>
-        <ul class="mt-5 space-y-2 text-sm text-slate-700">
-          <li>• Geen open poorten nodig voor beheer</li>
-          <li>• Toegang per persoon/device (makkelijk revoke/offboarding)</li>
-          <li>• Past bij ons done‑for‑you delivery model</li>
-        </ul>
-      </div>
-
-      <div class="rounded-2xl border border-slate-200 p-8">
-        <h2 class="text-xl font-semibold">Least privilege + secrets</h2>
-        <p class="mt-3 text-sm text-slate-700">
-          Integraties krijgen alleen de rechten die ze nodig hebben. Secrets (API keys, tokens) staan niet in code en niet in chats.
-        </p>
-        <ul class="mt-5 space-y-2 text-sm text-slate-700">
-          <li>• Least-privilege per integratie</li>
-          <li>• Secrets management (geen keys in repo)</li>
-          <li>• Duidelijke scope per agent/workflow</li>
-        </ul>
-      </div>
-
-      <div class="rounded-2xl border border-slate-200 p-8">
-        <h2 class="text-xl font-semibold">Logging & traceability</h2>
-        <p class="mt-3 text-sm text-slate-700">
-          Voor business use-cases wil je kunnen zien wat de agent deed, wanneer, en waarom.
-          We kiezen een logging-baseline die past bij jouw stack en risico-profiel.
-        </p>
-        <ul class="mt-5 space-y-2 text-sm text-slate-700">
-          <li>• Reproduceerbaar gedrag met testcases</li>
-          <li>• Duidelijke acceptatiecriteria</li>
-          <li>• Controlled rollout (geen big-bang)</li>
-        </ul>
-      </div>
-
-      <div class="rounded-2xl border border-slate-200 p-8">
-        <h2 class="text-xl font-semibold">Backups & recovery</h2>
-        <p class="mt-3 text-sm text-slate-700">
-          We draaien op een “uptime first” mindset: dagelijkse backups, snelle restore, en daarna root-cause.
-        </p>
-        <ul class="mt-5 space-y-2 text-sm text-slate-700">
-          <li>• Daily backups (config + workspace)</li>
-          <li>• Fast restore bij incident</li>
-          <li>• 48h warranty na livegang + 2 weken break‑fix</li>
-        </ul>
-      </div>
+  <!-- ── Page header ───────────────────────────────────────────────── -->
+  <section style="background:var(--gradient-hero);border-bottom:1px solid var(--color-border-soft);position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;pointer-events:none;" aria-hidden="true">
+      <div style="position:absolute;top:-60px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(59,130,246,0.09) 0%,transparent 70%);border-radius:50%;"></div>
+      <div style="position:absolute;inset:0;background-image:linear-gradient(var(--color-border) 1px,transparent 1px),linear-gradient(90deg,var(--color-border) 1px,transparent 1px);background-size:64px 64px;opacity:0.3;"></div>
     </div>
-
-    <div class="mt-12 rounded-2xl bg-slate-900 px-8 py-10 text-white">
-      <h2 class="text-2xl font-semibold">Vraag je security baseline aan</h2>
-      <p class="mt-3 max-w-2xl text-white/80">
-        Plan een intake. We leggen vooraf vast: hosting, data flows, integraties, toegang en logging.
+    <div class="mx-auto max-w-6xl px-4 py-16 sm:py-20" style="position:relative;">
+      <p class="animate-on-scroll section-badge mb-5">Security by default</p>
+      <h1 class="animate-on-scroll delay-1 text-4xl font-semibold tracking-tight sm:text-5xl" style="color:var(--color-navy);line-height:1.1">Beveiliging</h1>
+      <p class="animate-on-scroll delay-2 mt-4 max-w-2xl text-lg" style="color:var(--color-text-muted)">
+        Premium/corporate delivery betekent: duidelijke grenzen, minimale exposure en inzicht in wat er gebeurt.
+        We bouwen agents die je echt kunt draaien in productie — niet alleen een demo.
       </p>
-      <a href="/contact" class="mt-6 inline-block rounded-md bg-white px-5 py-3 text-sm font-medium text-slate-900 hover:bg-slate-100">Contact</a>
     </div>
   </section>
+
+  <!-- ── Security pillars ───────────────────────────────────────────── -->
+  <section style="background:#fff">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <p class="animate-on-scroll section-badge mb-4">De vier pijlers</p>
+      <h2 class="animate-on-scroll delay-1 text-2xl font-semibold tracking-tight" style="color:var(--color-navy)">Onze security baseline</h2>
+
+      <div class="mt-10 grid gap-6 lg:grid-cols-2">
+
+        <!-- Tailscale -->
+        <div class="card-hover animate-on-scroll rounded-2xl border p-8" style="border-color:var(--color-border);border-left:3px solid var(--color-blue)">
+          <div class="mb-4 flex items-center gap-3">
+            <span class="flex h-10 w-10 items-center justify-center rounded-xl text-xl" style="background:var(--color-blue-light)">🔒</span>
+            <h2 class="text-lg font-semibold" style="color:var(--color-navy)">Tailscale (secure remote access)</h2>
+          </div>
+          <p class="text-sm leading-relaxed" style="color:var(--color-text-muted)">
+            Voor beheer en troubleshooting gebruiken we bij voorkeur <span class="font-semibold" style="color:var(--color-navy)">Tailscale</span>.
+            Identity-based, end‑to‑end encrypted, en voorkomt dat je VPS "open" moet staan.
+          </p>
+          <ul class="mt-5 space-y-2.5 text-sm" style="color:var(--color-text-muted)">
+            {[
+              'Geen open poorten nodig voor beheer',
+              'Toegang per persoon/device (makkelijk revoke/offboarding)',
+              'Past bij ons done‑for‑you delivery model',
+            ].map(item => (
+              <li class="flex items-start gap-2.5">
+                <span class="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-white text-[10px]" style="background:var(--color-blue)">✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Least privilege -->
+        <div class="card-hover animate-on-scroll delay-1 rounded-2xl border p-8" style="border-color:var(--color-border);border-left:3px solid #6366f1">
+          <div class="mb-4 flex items-center gap-3">
+            <span class="flex h-10 w-10 items-center justify-center rounded-xl text-xl" style="background:#ede9fe">🛡️</span>
+            <h2 class="text-lg font-semibold" style="color:var(--color-navy)">Least privilege + secrets</h2>
+          </div>
+          <p class="text-sm leading-relaxed" style="color:var(--color-text-muted)">
+            Integraties krijgen alleen de rechten die ze nodig hebben. Secrets (API keys, tokens) staan niet in code en niet in chats.
+          </p>
+          <ul class="mt-5 space-y-2.5 text-sm" style="color:var(--color-text-muted)">
+            {[
+              'Least-privilege per integratie',
+              'Secrets management (geen keys in repo)',
+              'Duidelijke scope per agent/workflow',
+            ].map(item => (
+              <li class="flex items-start gap-2.5">
+                <span class="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-white text-[10px]" style="background:#6366f1">✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Logging -->
+        <div class="card-hover animate-on-scroll delay-2 rounded-2xl border p-8" style="border-color:var(--color-border);border-left:3px solid #8b5cf6">
+          <div class="mb-4 flex items-center gap-3">
+            <span class="flex h-10 w-10 items-center justify-center rounded-xl text-xl" style="background:#f3e8ff">📊</span>
+            <h2 class="text-lg font-semibold" style="color:var(--color-navy)">Logging & traceability</h2>
+          </div>
+          <p class="text-sm leading-relaxed" style="color:var(--color-text-muted)">
+            Voor business use-cases wil je kunnen zien wat de agent deed, wanneer, en waarom.
+            We kiezen een logging-baseline die past bij jouw stack en risico-profiel.
+          </p>
+          <ul class="mt-5 space-y-2.5 text-sm" style="color:var(--color-text-muted)">
+            {[
+              'Reproduceerbaar gedrag met testcases',
+              'Duidelijke acceptatiecriteria',
+              'Controlled rollout (geen big-bang)',
+            ].map(item => (
+              <li class="flex items-start gap-2.5">
+                <span class="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-white text-[10px]" style="background:#8b5cf6">✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Backups -->
+        <div class="card-hover animate-on-scroll delay-3 rounded-2xl border p-8" style="border-color:var(--color-border);border-left:3px solid #22c55e">
+          <div class="mb-4 flex items-center gap-3">
+            <span class="flex h-10 w-10 items-center justify-center rounded-xl text-xl" style="background:#dcfce7">💾</span>
+            <h2 class="text-lg font-semibold" style="color:var(--color-navy)">Backups & recovery</h2>
+          </div>
+          <p class="text-sm leading-relaxed" style="color:var(--color-text-muted)">
+            We draaien op een "uptime first" mindset: dagelijkse backups, snelle restore, en daarna root-cause analyse.
+          </p>
+          <ul class="mt-5 space-y-2.5 text-sm" style="color:var(--color-text-muted)">
+            {[
+              'Daily backups (config + workspace)',
+              'Fast restore bij incident',
+              '48h warranty na livegang + 2 weken break‑fix',
+            ].map(item => (
+              <li class="flex items-start gap-2.5">
+                <span class="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-white text-[10px]" style="background:#22c55e">✓</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Trust section ──────────────────────────────────────────────── -->
+  <section style="background:var(--color-surface);border-top:1px solid var(--color-border-soft);border-bottom:1px solid var(--color-border-soft)">
+    <div class="mx-auto max-w-6xl px-4 py-16">
+      <div class="grid gap-10 lg:grid-cols-12 items-center">
+        <div class="lg:col-span-7 animate-on-scroll">
+          <p class="section-badge mb-4">Compliance</p>
+          <h2 class="text-2xl font-semibold tracking-tight" style="color:var(--color-navy)">Gebouwd voor productie — niet voor demo's</h2>
+          <p class="mt-4 text-sm leading-relaxed max-w-2xl" style="color:var(--color-text-muted)">
+            Onze aanpak is geschikt voor bedrijven die te maken hebben met klantendata, interne systemen en compliance-vereisten.
+            We leggen alles vooraf vast: hosting, data flows, integraties, toegang en logging.
+          </p>
+          <div class="mt-6 grid gap-3 sm:grid-cols-2 text-sm" style="color:var(--color-text-muted)">
+            {[
+              'AVG/GDPR-bewust ontwerp',
+              'Data blijft bij jou (geen vendor lock-in)',
+              'Expliciete scope per agent',
+              'Geen onverwachte datadeling',
+            ].map(item => (
+              <div class="flex items-center gap-2.5">
+                <span class="flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-white text-[10px]" style="background:var(--gradient-accent)">✓</span>
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="lg:col-span-5 animate-on-scroll delay-2">
+          <div class="rounded-2xl p-8" style="background:var(--color-navy)">
+            <p class="text-xs font-semibold uppercase tracking-wider mb-3" style="color:rgba(255,255,255,0.4)">Klaar voor productie</p>
+            <h3 class="text-lg font-semibold text-white">Security baseline op aanvraag</h3>
+            <p class="mt-3 text-sm leading-relaxed" style="color:rgba(255,255,255,0.65)">Wil je weten hoe we jouw specifieke setup beveiligen? Plan een intake en we lopen de security baseline samen door.</p>
+            <a href="/contact" class="mt-5 inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 text-sm font-semibold transition-all hover:bg-blue-50" style="color:var(--color-navy)">
+              Plan intake
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────────────────── -->
+  <section class="py-16">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="animate-on-scroll relative overflow-hidden rounded-3xl px-8 py-14 sm:px-14" style="background:var(--gradient-cta)">
+        <div style="position:absolute;top:-80px;right:-60px;width:400px;height:400px;background:radial-gradient(circle,rgba(99,102,241,0.25) 0%,transparent 70%);border-radius:50%;pointer-events:none;" aria-hidden="true"></div>
+        <div style="position:relative;">
+          <h2 class="text-2xl font-semibold text-white sm:text-3xl">Vraag je security baseline aan</h2>
+          <p class="mt-3 max-w-2xl text-sm leading-relaxed" style="color:rgba(255,255,255,0.7)">
+            Plan een intake. We leggen vooraf vast: hosting, data flows, integraties, toegang en logging.
+          </p>
+          <a href="/contact" class="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3.5 text-sm font-semibold transition-all hover:bg-blue-50" style="color:var(--color-navy)">
+            Neem contact op
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </BaseLayout>

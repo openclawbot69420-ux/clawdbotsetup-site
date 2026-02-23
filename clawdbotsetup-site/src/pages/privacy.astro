@@ -6,45 +6,96 @@ const description = 'Privacyverklaring (AVG/GDPR) voor clawdbotsetup.';
 ---
 
 <BaseLayout title={title} description={description}>
-  <section class="mx-auto max-w-3xl px-4 py-16">
-    <h1 class="text-4xl font-semibold tracking-tight">Privacy</h1>
-    <p class="mt-4 text-slate-700">Laatste update: 2026-02-22</p>
 
-    <div class="prose prose-slate mt-10 max-w-none">
-      <p>
-        Dit is een basis privacyverklaring voor clawdbotsetup. We verwerken persoonsgegevens alleen wanneer dat nodig is
-        om contact op te nemen, een voorstel te maken en de dienstverlening uit te voeren.
-      </p>
-
-      <h2>Welke gegevens</h2>
-      <ul>
-        <li>Contactgegevens (naam, e-mail, optioneel bedrijf)</li>
-        <li>Berichtinhoud die je via het contactformulier stuurt</li>
-      </ul>
-
-      <h2>Doelen</h2>
-      <ul>
-        <li>Reageren op je aanvraag</li>
-        <li>Intake plannen en een voorstel sturen</li>
-        <li>Uitvoering van de opdracht (indien je klant wordt)</li>
-      </ul>
-
-      <h2>Bewaartermijnen</h2>
-      <p>
-        We bewaren contactaanvragen niet langer dan nodig. Offertes en klantcommunicatie bewaren we zolang dat relevant
-        is voor de samenwerking en wettelijke verplichtingen.
-      </p>
-
-      <h2>Delen met derden</h2>
-      <p>
-        We delen gegevens alleen met partijen die nodig zijn voor communicatie/hosting (bijv. e-mail provider, form
-        provider) en alleen als dat noodzakelijk is.
-      </p>
-
-      <h2>Contact</h2>
-      <p>
-        Vragen? Mail naar <a href="mailto:hello@clawdbotsetup.nl">hello@clawdbotsetup.nl</a>.
-      </p>
+  <!-- ── Page header ───────────────────────────────────────────────── -->
+  <section style="background:var(--gradient-hero);border-bottom:1px solid var(--color-border-soft);position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;pointer-events:none;" aria-hidden="true">
+      <div style="position:absolute;top:-60px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(59,130,246,0.09) 0%,transparent 70%);border-radius:50%;"></div>
+      <div style="position:absolute;inset:0;background-image:linear-gradient(var(--color-border) 1px,transparent 1px),linear-gradient(90deg,var(--color-border) 1px,transparent 1px);background-size:64px 64px;opacity:0.3;"></div>
+    </div>
+    <div class="mx-auto max-w-6xl px-4 py-16 sm:py-20" style="position:relative;">
+      <p class="animate-on-scroll section-badge mb-5">Juridisch</p>
+      <h1 class="animate-on-scroll delay-1 text-4xl font-semibold tracking-tight sm:text-5xl" style="color:var(--color-navy);line-height:1.1">Privacy</h1>
+      <p class="animate-on-scroll delay-2 mt-4 text-base" style="color:var(--color-text-muted)">Laatste update: 2026-02-22</p>
     </div>
   </section>
+
+  <!-- ── Privacy content ───────────────────────────────────────────── -->
+  <section style="background:#fff">
+    <div class="mx-auto max-w-3xl px-4 py-16">
+      <div class="animate-on-scroll rounded-2xl border p-8 mb-6" style="border-color:var(--color-border);background:var(--color-surface)">
+        <p class="text-sm leading-relaxed" style="color:var(--color-text-muted)">
+          Dit is een basis privacyverklaring voor clawdbotsetup. We verwerken persoonsgegevens alleen wanneer dat nodig is
+          om contact op te nemen, een voorstel te maken en de dienstverlening uit te voeren.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+
+        <div class="animate-on-scroll rounded-2xl border p-8" style="border-color:var(--color-border)">
+          <h2 class="text-lg font-semibold mb-4" style="color:var(--color-navy)">Welke gegevens</h2>
+          <ul class="space-y-3 text-sm" style="color:var(--color-text-muted)">
+            {[
+              'Contactgegevens (naam, e-mail, optioneel bedrijf)',
+              'Berichtinhoud die je via het contactformulier stuurt',
+            ].map(item => (
+              <li class="flex items-start gap-2.5">
+                <span class="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-white text-[10px]" style="background:var(--gradient-accent)">→</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="animate-on-scroll delay-1 rounded-2xl border p-8" style="border-color:var(--color-border)">
+          <h2 class="text-lg font-semibold mb-4" style="color:var(--color-navy)">Doelen</h2>
+          <ul class="space-y-3 text-sm" style="color:var(--color-text-muted)">
+            {[
+              'Reageren op je aanvraag',
+              'Intake plannen en een voorstel sturen',
+              'Uitvoering van de opdracht (indien je klant wordt)',
+            ].map(item => (
+              <li class="flex items-start gap-2.5">
+                <span class="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-white text-[10px]" style="background:var(--gradient-accent)">→</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="animate-on-scroll delay-2 rounded-2xl border p-8" style="border-color:var(--color-border)">
+          <h2 class="text-lg font-semibold mb-4" style="color:var(--color-navy)">Bewaartermijnen</h2>
+          <p class="text-sm leading-relaxed" style="color:var(--color-text-muted)">
+            We bewaren contactaanvragen niet langer dan nodig. Offertes en klantcommunicatie bewaren we zolang dat relevant
+            is voor de samenwerking en wettelijke verplichtingen.
+          </p>
+        </div>
+
+        <div class="animate-on-scroll delay-3 rounded-2xl border p-8" style="border-color:var(--color-border)">
+          <h2 class="text-lg font-semibold mb-4" style="color:var(--color-navy)">Delen met derden</h2>
+          <p class="text-sm leading-relaxed" style="color:var(--color-text-muted)">
+            We delen gegevens alleen met partijen die nodig zijn voor communicatie/hosting (bijv. e-mail provider, form
+            provider) en alleen als dat noodzakelijk is.
+          </p>
+        </div>
+
+        <div class="animate-on-scroll delay-4 rounded-2xl border p-8" style="border-color:var(--color-border)">
+          <h2 class="text-lg font-semibold mb-4" style="color:var(--color-navy)">Jouw rechten</h2>
+          <p class="text-sm leading-relaxed mb-4" style="color:var(--color-text-muted)">
+            Onder de AVG heb je recht op inzage, rectificatie, verwijdering, en bezwaar. Neem contact op voor vragen.
+          </p>
+          <a
+            href="mailto:hello@clawdbotsetup.nl"
+            class="inline-flex items-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-medium transition-all hover:shadow-md"
+            style="border-color:var(--color-border);color:var(--color-navy)"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+            hello@clawdbotsetup.nl
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 </BaseLayout>
