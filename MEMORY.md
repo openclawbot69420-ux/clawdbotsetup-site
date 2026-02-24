@@ -49,6 +49,21 @@
 - Uses VS Code as primary editor
 - Some coding experience but relies heavily on AI assistance
 
+## Website: youraiworker.nl
+- Domain: youraiworker.nl (Namecheap)
+- Stack: Next.js + React + Tailwind CSS
+- Hosting: Vercel
+- Contact email: Openclawbot69420@gmail.com
+- Repo: separate public repo (not in openclaw workspace)
+- Content: Dutch (NL-first)
+- Previously had Astro version in clawdbotsetup-site — replaced
+
+## Mees Technical Skills (Updated)
+- More technical than initially assessed — runs a full-stack TypeScript monorepo (Fusey project)
+- Knows: React, TanStack, Tailwind CSS 4, Zod, oRPC, Kysely, PostgreSQL, pnpm
+- Detailed coding conventions saved in memory/mees-coding-conventions.md
+- Prefers Next.js + React for web projects
+
 ## Setup History (2026-02-22)
 
 - Configured Opus 4.6 as default model

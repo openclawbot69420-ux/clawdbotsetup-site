@@ -34,7 +34,7 @@
 - **Go-to-market focus:** Promotion + outreach (initially broad: "any business")
 - **Brand positioning:** Premium + corporate
 - **Launch market:** The Netherlands first, then expand internationally
-- **Coding experience:** Some, but learning — needs clear explanations and guidance
+- **Coding experience:** Solid — runs a full-stack TypeScript monorepo (Fusey: React, TanStack, Tailwind CSS 4, oRPC, Kysely, PostgreSQL). Prefers Next.js + React.
 - **Primary editor:** VS Code
 - **Primary chat channel:** Telegram (paired)
 - **Work style:** Flexible schedule — works when and where he wants, not tied to morning/night
