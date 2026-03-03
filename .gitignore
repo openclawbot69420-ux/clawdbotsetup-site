@@ -5,3 +5,7 @@
 # OS / editor
 .DS_Store
 .vscode/
+
+# Nested projects (not part of openclaw workspace repo)
+youraiworker-site/
+src/
