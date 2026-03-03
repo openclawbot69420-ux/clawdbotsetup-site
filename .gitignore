@@ -9,3 +9,7 @@
 # Nested projects (not part of openclaw workspace repo)
 youraiworker-site/
 src/
+
+# Nested repos / build artifacts
+youraiworker-site/
+src/
