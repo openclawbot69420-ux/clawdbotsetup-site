@@ -9,6 +9,10 @@ memory/heartbeat-state.json
 .DS_Store
 .vscode/
 
+# Dependencies / build output
+**/node_modules/
+**/.astro/
+
 # Nested projects (not part of openclaw workspace repo)
 youraiworker-site/
 src/
