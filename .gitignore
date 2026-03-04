@@ -2,6 +2,9 @@
 .openclaw/
 .pi/
 
+# Heartbeat runtime state
+memory/heartbeat-state.json
+
 # OS / editor
 .DS_Store
 .vscode/
