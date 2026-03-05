@@ -4,8 +4,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const title = 'Contact';
 const description = 'Plan een intake of vraag een voorstel aan.';
 
-// TODO: set this to your real Formspree / Formspark endpoint.
-const formAction = "https://formspree.io/f/your-form-id";
+// Optional: set PUBLIC_FORMSPREE_ENDPOINT in your Astro env to enable this form.
+const formAction = import.meta.env.PUBLIC_FORMSPREE_ENDPOINT;
+const hasFormEndpoint = typeof formAction === 'string' && formAction.startsWith('https://');
 ---
 
 <BaseLayout title={title} description={description}>
@@ -32,49 +33,59 @@ const formAction = "https://formspree.io/f/your-form-id";
 
         <!-- Form -->
         <div class="lg:col-span-7 animate-on-scroll">
-          <form method="POST" action={formAction} class="rounded-2xl border p-8 space-y-6" style="border-color:var(--color-border)">
-            <div class="grid gap-5 sm:grid-cols-2">
-              <div>
-                <label class="form-label" for="name">Naam</label>
-                <input class="form-input" id="name" name="name" required placeholder="Jan de Vries" />
+          {hasFormEndpoint ? (
+            <form method="POST" action={formAction} class="rounded-2xl border p-8 space-y-6" style="border-color:var(--color-border)">
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label class="form-label" for="name">Naam</label>
+                  <input class="form-input" id="name" name="name" required placeholder="Jan de Vries" />
+                </div>
+                <div>
+                  <label class="form-label" for="email">E-mail</label>
+                  <input class="form-input" id="email" name="email" type="email" required placeholder="jan@bedrijf.nl" />
+                </div>
               </div>
+
               <div>
-                <label class="form-label" for="email">E-mail</label>
-                <input class="form-input" id="email" name="email" type="email" required placeholder="jan@bedrijf.nl" />
+                <label class="form-label" for="company">Bedrijf <span style="color:var(--color-text-xmuted);font-weight:400;">(optioneel)</span></label>
+                <input class="form-input" id="company" name="company" placeholder="Uw bedrijf B.V." />
               </div>
+
+              <div>
+                <label class="form-label" for="message">Waar loop je nu tijd op te verliezen?</label>
+                <textarea
+                  class="form-input"
+                  id="message"
+                  name="message"
+                  required
+                  rows="5"
+                  placeholder="Bijv. we besteden 3 uur per dag aan het handmatig triage-en van klantmails…"
+                ></textarea>
+              </div>
+
+              <!-- Honeypot -->
+              <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+
+              <div class="pt-2">
+                <button type="submit" class="btn-primary w-full justify-center py-3.5 text-base">
+                  Verstuur aanvraag
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+
+              <p class="text-xs text-center" style="color:var(--color-text-xmuted)">
+                Door te versturen ga je akkoord dat we je gegevens gebruiken om contact op te nemen. Zie onze <a href="/privacy" class="underline hover:text-blue-600">privacyverklaring</a>.
+              </p>
+            </form>
+          ) : (
+            <div class="rounded-2xl border p-8" style="border-color:var(--color-border)">
+              <h2 class="text-lg font-semibold" style="color:var(--color-navy)">Contact</h2>
+              <p class="mt-2 text-sm" style="color:var(--color-text-muted)">
+                Het formulier staat tijdelijk uit. Mail ons op <a href="mailto:hello@clawdbotsetup.nl" class="underline hover:text-blue-600">hello@clawdbotsetup.nl</a> en we reageren binnen 24 uur.
+              </p>
+              <a class="btn-primary mt-5 inline-flex" href="mailto:hello@clawdbotsetup.nl">Mail direct</a>
             </div>
-
-            <div>
-              <label class="form-label" for="company">Bedrijf <span style="color:var(--color-text-xmuted);font-weight:400;">(optioneel)</span></label>
-              <input class="form-input" id="company" name="company" placeholder="Uw bedrijf B.V." />
-            </div>
-
-            <div>
-              <label class="form-label" for="message">Waar loop je nu tijd op te verliezen?</label>
-              <textarea
-                class="form-input"
-                id="message"
-                name="message"
-                required
-                rows="5"
-                placeholder="Bijv. we besteden 3 uur per dag aan het handmatig triage-en van klantmails…"
-              ></textarea>
-            </div>
-
-            <!-- Honeypot -->
-            <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
-
-            <div class="pt-2">
-              <button type="submit" class="btn-primary w-full justify-center py-3.5 text-base">
-                Verstuur aanvraag
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-            </div>
-
-            <p class="text-xs text-center" style="color:var(--color-text-xmuted)">
-              Door te versturen ga je akkoord dat we je gegevens gebruiken om contact op te nemen. Zie onze <a href="/privacy" class="underline hover:text-blue-600">privacyverklaring</a>.
-            </p>
-          </form>
+          )}
         </div>
 
         <!-- Info sidebar -->
