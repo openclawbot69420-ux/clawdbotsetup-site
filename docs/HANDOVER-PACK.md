@@ -1,4 +1,4 @@
-# Handover Pack — {{CLIENT_NAME}}
+# Handover Pack - {{CLIENT_NAME}}
 
 **Project:** {{PROJECT_NAME}}  
 **Delivery date:** {{YYYY-MM-DD}}  
@@ -152,8 +152,8 @@ Security baseline for administration is **Tailscale**.
 ## 8) Escalation (when you need help fast)
 
 ### Support contacts
-- **Primary support contact:** {{SUPPORT_NAME}} — {{SUPPORT_EMAIL}} — {{SUPPORT_PHONE_OR_CHAT}}
-- **Secondary (backup) contact:** {{SECONDARY_SUPPORT_NAME}} — {{SECONDARY_SUPPORT_EMAIL}}
+- **Primary support contact:** {{SUPPORT_NAME}} - {{SUPPORT_EMAIL}} - {{SUPPORT_PHONE_OR_CHAT}}
+- **Secondary (backup) contact:** {{SECONDARY_SUPPORT_NAME}} - {{SECONDARY_SUPPORT_EMAIL}}
 
 ### How to report an issue
 Please include:

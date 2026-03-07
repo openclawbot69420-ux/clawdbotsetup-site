@@ -1,4 +1,4 @@
-# Delivery SOP (v1) — clawdbotsetup
+# Delivery SOP (v1) - clawdbotsetup
 
 Goal: consistent, client-friendly delivery that avoids failed setups + angry clients.
 
