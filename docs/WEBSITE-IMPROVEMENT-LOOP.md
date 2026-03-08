@@ -5,7 +5,7 @@ Goal: ship coherent, sales-oriented improvements without copy drift or regressio
 ## Rules
 
 - NL-first, premium/corporate tone.
-- Never use the em dash "—" in website copy. Use "-".
+- Never use the em dash character in website copy. Use "-".
 - No claim unless we can deliver it (OpenClaw feature or our service).
 - Build must pass: `npx next build`.
 - Prefer fewer, coherent pushes (batch changes).
