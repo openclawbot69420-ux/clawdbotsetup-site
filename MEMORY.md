@@ -2,8 +2,8 @@
 
 ## People
 
-- **Mees** — primary human. Entrepreneur based in Amsterdam. Building an AI agent business using OpenClaw.
-- **Tieko** — Mees's brother. Setting up OpenClaw together with Mees.
+- **Mees** - primary human. Entrepreneur based in Amsterdam. Building an AI agent business using OpenClaw.
+- **Tieko** - Mees's brother. Setting up OpenClaw together with Mees.
 
 ## The Mission
 
@@ -25,8 +25,8 @@
 - Handover preference: client present for handover
 - Backups preference: enable automatic daily backups
 - Working name: clawdbotsetup
-- Mees is learning as he goes — explain everything clearly
-- This is the beginning — we're in setup/foundation phase
+- Mees is learning as he goes - explain everything clearly
+- This is the beginning - we're in setup/foundation phase
 
 ## User Preferences
 
@@ -37,7 +37,7 @@
   - Prefer **openai-codex/gpt-5.2** for coding tasks and straightforward implementation
 - Wants explicit model transparency: "We did Opus for this" / "We did Codex for this"
 - Wants future tasks to follow this model-selection policy by default
-- Always be detailed — explain steps clearly since this is new territory
+- Always be detailed - explain steps clearly since this is new territory
 - Be proactive — check things, suggest stuff, don't wait to be asked
 - Continuously update USER.md, MEMORY.md, and IDENTITY.md as we learn more
 
