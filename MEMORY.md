@@ -38,14 +38,14 @@
 - Wants explicit model transparency: "We did Opus for this" / "We did Codex for this"
 - Wants future tasks to follow this model-selection policy by default
 - Always be detailed - explain steps clearly since this is new territory
-- Be proactive — check things, suggest stuff, don't wait to be asked
+- Be proactive - check things, suggest stuff, don't wait to be asked
 - Continuously update USER.md, MEMORY.md, and IDENTITY.md as we learn more
 
 ## Working Style
 
 - Values clear execution and cost efficiency
 - Wants delegation of lower-level tasks to sub-agents where useful
-- Flexible schedule — no fixed morning/night routine
+- Flexible schedule - no fixed morning/night routine
 - Uses VS Code as primary editor
 - Some coding experience but relies heavily on AI assistance
 
@@ -56,10 +56,10 @@
 - Contact email: Openclawbot69420@gmail.com
 - Repo: separate public repo (not in openclaw workspace)
 - Content: Dutch (NL-first)
-- Previously had Astro version in clawdbotsetup-site — replaced
+- Previously had Astro version in clawdbotsetup-site - replaced
 
 ## Mees Technical Skills (Updated)
-- More technical than initially assessed — runs a full-stack TypeScript monorepo (Fusey project)
+- More technical than initially assessed - runs a full-stack TypeScript monorepo (Fusey project)
 - Knows: React, TanStack, Tailwind CSS 4, Zod, oRPC, Kysely, PostgreSQL, pnpm
 - Detailed coding conventions saved in memory/mees-coding-conventions.md
 - Prefers Next.js + React for web projects
@@ -74,5 +74,5 @@
 - Enabled coding-agent skill with Codex CLI
 - Enabled QMD memory backend (BM25 + vectors + reranking)
 - Enabled compaction.memoryFlush + experimental sessionMemory
-- Telegram bot connected (@goonbottttttt_bot) — primary chat channel (paired Telegram)
+- Telegram bot connected (@goonbottttttt_bot) - primary chat channel (paired Telegram)
 - Kimi channel connected
