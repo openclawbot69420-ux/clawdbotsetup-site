@@ -12,11 +12,10 @@ memory/heartbeat-state.json
 # Dependencies / build output
 **/node_modules/
 **/.astro/
+**/.next/
+**/.turbo/
+**/dist/
 
 # Nested projects (not part of openclaw workspace repo)
-youraiworker-site/
-src/
-
-# Nested repos / build artifacts
 youraiworker-site/
 src/
